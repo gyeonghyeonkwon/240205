@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+### CUSTOM ###
+application-secret.yml
+temp/medium_dev.mv.db
+temp/medium_dev.trace.db

@@ -12,7 +12,8 @@
 </head>
 <body>
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
-<nav th:replace="~{global/navabar :: navbarFragment}"></nav>
+<nav th:replace="~{global/navarbar :: navbarFragment}"></nav>
+<script th:src="@{/bootstrap.min.js}"></script>
 
 <th:block layout:fragment="content"></th:block>
 <!-- 기본 템플릿 안에 삽입될 내용 End -->

@@ -1,6 +1,7 @@
 package com.ll.demo.domain.Answer.Answer.Entity;
 
 import com.ll.demo.domain.global.BaseEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.*;
 
@@ -13,5 +14,6 @@ import lombok.*;
 @ToString(callSuper = true)
 public class Answer extends BaseEntity {
 
-
+    @Column
+    private String content;
 }

@@ -5,6 +5,8 @@ import com.ll.demo.domain.question.question.Repository.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class QuestionService {
@@ -18,5 +20,14 @@ public class QuestionService {
                 .build();
 
         this.questionRepository.save(question);
+    }
+
+    public Question getQuestion(Long id) {
+        Optional<Question> question = this.questionRepository.findById(id);
+        if (question.isPresent()) {
+            return question.get();
+        } else {
+            throw new RuntimeException("question not found");
+        }
     }
 }
